@@ -1,72 +1,72 @@
 #
 msgid ""
-msgstr "Language: en_US\n"
+msgstr "Language: sv_SE\n"
 
 msgid "plugins.generic.contextEnhancer.displayName"
-msgstr "Context Enhancer"
+msgstr "Kontextförstärkare"
 
 msgid "plugins.generic.contextEnhancer.description"
 msgstr ""
-"An OJS plugin that allows additional data to be added to the journal’s "
-"context and its publications to be shown on the frontend"
+"En OJS -plugin som gör att ytterligare data kan läggas till i tidskriftens "
+"sammanhang och dess publikationer kan visas på frontend"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.ownerType"
-msgstr "Owner type"
+msgstr "Ägartyp"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.ownerType.description"
-msgstr "Choose your owner type from the list"
+msgstr "Välj din ägartyp från listan"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
-msgstr "Journal's DOI"
+msgstr "Journal's doi"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
 msgstr ""
-"Fill in the journal's DOI in the format 10.xxxx/xxxx (e.g. 10.1234/abcdefgh)"
+"Fyll i tidskriftens DOI i formatet 10.xxxx/xxxx (t.ex. 10.1234/abcdefgh)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh"
-msgstr "This Journal of this"
+msgstr "Denna tidskrift om detta"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDdh.description"
-msgstr "Fill in the journal's DDH ID number."
+msgstr "Fyll i tidskriftens DDH ID -nummer."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj"
-msgstr "Journal's DOAJ ID"
+msgstr "Journal's Doaj ID"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDoaj.description"
-msgstr "Fill in the journal's DOAJ ID."
+msgstr "Fyll i tidskriftens Doaj -ID."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
-msgstr "Publisher location"
+msgstr "Förläggare"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
 msgstr ""
-"You have filled this publisher name in the settings: "
-"<strong>{$publisherName}</strong>"
+"Du har fyllt detta utgivarnamn i inställningarna: <strong> {$ PublisherName}"
+" </strong>"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
-msgstr "Select the country where the publisher is based."
+msgstr "Välj det land där förläggaren är baserad."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"
-msgstr "Journal keywords"
+msgstr "Journalnyckelord"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords.description"
-msgstr "Enter keywords describing your journal, separated by ;"
+msgstr "Ange nyckelord som beskriver din dagbok, separerad av;"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
-msgstr "Check if you are using peer reviewe process."
+msgstr "Kontrollera om du använder peer review -process."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.openAuthorship"
-msgstr "Check if you have open authorship."
+msgstr "Kontrollera om du har öppet författarskap."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalPolicy"
-msgstr "Journal policy"
+msgstr "Journalpolicy"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.diamondCategory"
-msgstr "Diamond Categories"
+msgstr "Diamantkategorier"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.additionalMetadata"
-msgstr "Additional Journal Metadata"
+msgstr "Ytterligare journalmetadata"

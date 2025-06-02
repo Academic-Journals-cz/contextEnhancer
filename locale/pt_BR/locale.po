@@ -1,72 +1,73 @@
 #
 msgid ""
-msgstr "Language: en_US\n"
+msgstr "Language: pt_BR\n"
 
 msgid "plugins.generic.contextEnhancer.displayName"
-msgstr "Context Enhancer"
+msgstr "Intensificador de contexto"
 
 msgid "plugins.generic.contextEnhancer.description"
 msgstr ""
-"An OJS plugin that allows additional data to be added to the journal’s "
-"context and its publications to be shown on the frontend"
+"Um plugin OJS que permite que dados adicionais sejam adicionados ao contexto"
+" da revista e suas publicações a serem mostradas no front -end"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.ownerType"
-msgstr "Owner type"
+msgstr "Tipo de proprietário"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.ownerType.description"
-msgstr "Choose your owner type from the list"
+msgstr "Escolha o seu tipo de proprietário na lista"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
-msgstr "Journal's DOI"
+msgstr "Doi do diário"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
 msgstr ""
-"Fill in the journal's DOI in the format 10.xxxx/xxxx (e.g. 10.1234/abcdefgh)"
+"Preencha o DOI da revista no formato 10.xxxx/xxxx (por exemplo, "
+"10.1234/abcdefgh)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh"
-msgstr "This Journal of this"
+msgstr "Este diário deste"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDdh.description"
-msgstr "Fill in the journal's DDH ID number."
+msgstr "Preencha o número de identificação do DDH da revista."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj"
-msgstr "Journal's DOAJ ID"
+msgstr "DOAJ ID do diário"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDoaj.description"
-msgstr "Fill in the journal's DOAJ ID."
+msgstr "Preencha o ID DOAJ da revista."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
-msgstr "Publisher location"
+msgstr "Localização do editor"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
 msgstr ""
-"You have filled this publisher name in the settings: "
-"<strong>{$publisherName}</strong>"
+"Você preencheu este nome do editor nas configurações: <strong> {$ "
+"publishername} </strong>"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
-msgstr "Select the country where the publisher is based."
+msgstr "Selecione o país onde o editor se baseia."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"
-msgstr "Journal keywords"
+msgstr "Palavras -chave do diário"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords.description"
-msgstr "Enter keywords describing your journal, separated by ;"
+msgstr "Digite palavras -chave descrevendo seu diário, separado por;"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
-msgstr "Check if you are using peer reviewe process."
+msgstr "Verifique se você está usando o processo de revisão por pares."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.openAuthorship"
-msgstr "Check if you have open authorship."
+msgstr "Verifique se você tem autoria aberta."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalPolicy"
-msgstr "Journal policy"
+msgstr "Política de diário"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.diamondCategory"
-msgstr "Diamond Categories"
+msgstr "Categorias de diamantes"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.additionalMetadata"
-msgstr "Additional Journal Metadata"
+msgstr "Metadados do diário adicional"

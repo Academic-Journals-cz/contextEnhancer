@@ -1,72 +1,71 @@
 #
 msgid ""
-msgstr "Language: en_US\n"
+msgstr "Language: ar_IQ\n"
 
 msgid "plugins.generic.contextEnhancer.displayName"
-msgstr "Context Enhancer"
+msgstr "مُحسّن السياق"
 
 msgid "plugins.generic.contextEnhancer.description"
 msgstr ""
-"An OJS plugin that allows additional data to be added to the journal’s "
-"context and its publications to be shown on the frontend"
+"مكون إضافي لـ OJS يسمح بإضافة بيانات إضافية إلى سياق المجلة ومنشوراتها في "
+"الواجهة الأمامية"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.ownerType"
-msgstr "Owner type"
+msgstr "نوع المالك"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.ownerType.description"
-msgstr "Choose your owner type from the list"
+msgstr "اختر نوع مالك من القائمة"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
-msgstr "Journal's DOI"
+msgstr "مجلة doi"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
 msgstr ""
-"Fill in the journal's DOI in the format 10.xxxx/xxxx (e.g. 10.1234/abcdefgh)"
+"املأ DOI للمجلة بالتنسيق 10.xxxx/xxxx (على سبيل المثال 10.1234/ABCDEFGH)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh"
-msgstr "This Journal of this"
+msgstr "Journal's DDH ID"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDdh.description"
-msgstr "Fill in the journal's DDH ID number."
+msgstr "املأ رقم معرف DDH للمجلة."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj"
-msgstr "Journal's DOAJ ID"
+msgstr "مجلة DOAJ ID"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDoaj.description"
-msgstr "Fill in the journal's DOAJ ID."
+msgstr "املأ معرف Doaj للمجلة."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
-msgstr "Publisher location"
+msgstr "موقع الناشر"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
 msgstr ""
-"You have filled this publisher name in the settings: "
-"<strong>{$publisherName}</strong>"
+"لقد ملأت اسم الناشر هذا في الإعدادات: <strong> {$ publishername} </strong>"
 
 msgid ""
 "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
-msgstr "Select the country where the publisher is based."
+msgstr "حدد البلد الذي يوجد فيه الناشر."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"
-msgstr "Journal keywords"
+msgstr "الكلمات الرئيسية المجلة"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords.description"
-msgstr "Enter keywords describing your journal, separated by ;"
+msgstr "أدخل الكلمات الرئيسية التي تصف مجلتك ، مفصولة ؛"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
-msgstr "Check if you are using peer reviewe process."
+msgstr "تحقق مما إذا كنت تستخدم عملية مراجعة النظراء."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.openAuthorship"
-msgstr "Check if you have open authorship."
+msgstr "تحقق مما إذا كان لديك تأليف مفتوح."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalPolicy"
-msgstr "Journal policy"
+msgstr "سياسة المجلة"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.diamondCategory"
-msgstr "Diamond Categories"
+msgstr "فئات الماس"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.additionalMetadata"
-msgstr "Additional Journal Metadata"
+msgstr "دفعة مجلة إضافية"
