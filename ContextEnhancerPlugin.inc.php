@@ -120,8 +120,8 @@ class ContextEnhancerPlugin extends GenericPlugin {
                 $templateMgr = TemplateManager::getManager($request);
                 $templateMgr->registerPlugin('function', 'plugin_url', array($this, 'smartyPluginUrl'));
 
-                $this->import('JmefSettingsForm');
-                $form = new JmefSettingsForm($this, $context);
+                $this->import('ContextEnhancerSettingsForm');
+                $form = new ContextEnhancerSettingsForm($this, $context);
                 if ($request->getUserVar('save')) {
                     $form->readInputData();
                     if ($form->validate()) {
