@@ -3,7 +3,7 @@
 /**
  * @defgroup plugins_generic_contextenhancer Context metadata enhancing Plugin
  */
- 
+
 /**
  * @file plugins/generic/contextEnhancer/index.php
  *
