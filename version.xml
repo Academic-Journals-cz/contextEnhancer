@@ -2,7 +2,7 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * plugins/generic/jmef/version.xml
+  * plugins/generic/contextEnhancer/version.xml
   *
   * Copyright (c) 2014-2020 Simon Fraser University
   * Copyright (c) 2003-2020 John Willinsky
@@ -11,10 +11,10 @@
   * Plugin version information.
   -->
 <version>
-	<application>jmef</application>
+	<application>contextEnhancer</application>
 	<type>plugins.generic</type>
 	<release>1.0.1.0</release>
-	<date>2024-09-12</date>
+	<date>2025-06-02</date>
 	<lazy-load>1</lazy-load>
-	<class>JmefPlugin</class>
+	<class>ContextEnhancerPlugin</class>
 </version>

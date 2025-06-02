@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @file JmefSettingsForm.inc.php
+ * @file ContextEnhancerSettingsForm.inc.php
  *
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class JmefSettingsForm
- * @ingroup plugins_generic_jmef
+ * @class ContextEnhancerSettingsForm
+ * @ingroup plugins_generic_contextenhancer
  *
  * @brief Form for journal managers to modify Jmef plugin settings
  */
@@ -16,7 +16,7 @@
 
 import('lib.pkp.classes.form.Form');
 
-class JmefSettingsForm extends Form {
+class ContextEnhancerSettingsForm extends Form {
 
         const CONFIG_VARS = array(
 		'ownerType' => 'string',

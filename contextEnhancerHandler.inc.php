@@ -1,18 +1,17 @@
 <?php
 
 /**
- * @file pages/jmef/JmefHandler.inc.php
+ * @file pages/contextEnhancer/ContextEnhancerHandler.inc.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class JmefHandler
- * @ingroup pages_jmef
+ * @class ContextEnhancerHandler
  *
- * @brief Produce a Journal Metadata Exchange Format in XML format for submitting to aggregators.
+ * @brief 
  */
-class JmefHandler extends Handler {
+class ContextEnhancerHandler extends Handler {
 
     /**
      * Generate an XML sitemap for webcrawlers

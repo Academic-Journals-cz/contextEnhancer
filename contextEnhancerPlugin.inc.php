@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @file plugins/generic/jmef/JmefPlugin.inc.php
+ * @file plugins/generic/contextEnhancer/ContextEnhancerPlugin.inc.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class JmefPlugin
- * @ingroup plugins_generic_jmef
+ * @class ContextEnhancerPlugin
+ * @ingroup plugins_generic_contextenhancer
  *
  * @brief Journal Metadata Exchange Format plugin class
  */
 import('lib.pkp.classes.plugins.GenericPlugin');
 
-class JmefPlugin extends GenericPlugin {
+class ContextEnhancerPlugin extends GenericPlugin {
 
     /**
      * @copydoc Plugin::register()
