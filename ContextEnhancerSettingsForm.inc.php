@@ -8,7 +8,7 @@
  * @class ContextEnhancerSettingsForm
  * @ingroup plugins_generic_contextenhancer
  *
- * @brief Form for journal managers to modify Jmef plugin settings
+ * @brief Form for journal managers to modify Context Enhancer plugin settings
  */
 
 // $Id$
