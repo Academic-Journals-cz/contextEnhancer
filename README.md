@@ -2,7 +2,9 @@
 
 About
 -----
+An OJS plugin that allows additional data to be added to the journal’s context and its publications to be shown on the frontend
 
+This works independently from hooks which allows easy compatibility with OJS versions
 
 License
 -------
