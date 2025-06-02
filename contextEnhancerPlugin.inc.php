@@ -25,9 +25,7 @@ class ContextEnhancerPlugin extends GenericPlugin {
 
             HookRegistry::register('Schema::get::context', [$this, 'addToSchema']);
             
-            // Intercept the LoadHandler hook to present
-            // jmef when requested.
-            HookRegistry::register('LoadHandler', array($this, 'callbackHandleContent'));
+
         }
         return $success;
     }
@@ -75,47 +73,17 @@ class ContextEnhancerPlugin extends GenericPlugin {
     }
 
     /**
-     * Declare the handler function to process the actual page 
-     * @param $hookName string The name of the invoked hook
-     * @param $args array Hook parameters
-     * @return boolean Hook handling status
-     */
-    function callbackHandleContent($hookName, $args) {
-        $request = Application::get()->getRequest();
-        $templateMgr = TemplateManager::getManager($request);
-
-        $page = & $args[0];
-        $op = & $args[1];
-
-        if ($page == 'jmef') {
-            // Construct a path to look for
-            $path = $page;
-            if ($op !== 'index')
-                $path .= "/$op";
-            if ($ops = $request->getRequestedArgs())
-                $path .= '/' . implode('/', $ops);
-
-            // It is -- attach the jmef handler.
-            define('HANDLER_CLASS', 'JmefHandler');
-            $this->import('JmefHandler');
-
-            return true;
-        }
-        return false;
-    }
-
-    /**
      * @copydoc Plugin::getDisplayName()
      */
     function getDisplayName() {
-        return __('plugins.generic.jmef.displayName');
+        return __('plugins.generic.contextEnhancer.displayName');
     }
 
     /**
      * @copydoc Plugin::getDescription()
      */
     function getDescription() {
-        return __('plugins.generic.jmef.description');
+        return __('plugins.generic.contextEnhancer.description');
     }
 
     /**
