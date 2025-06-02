@@ -11,63 +11,63 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13T09:17:52+01:00\n"
 "Language: \n"
 
-msgid "plugins.generic.contextEnhancer.displayName" 
-msgstr "JMEF XML Generator"
+msgid "plugins.generic.contextEnhancer.displayName"
+msgstr "Context Enhancer"
 
-msgid "plugins.generic.contextEnhancer.description" 
-msgstr "The plugin extends the basic metadata for the journal to enable the creation of XML in the Journal Metadata Exchange Format (JMEF). The metadata can be filled in the plugin settings after it is activated. The generated XML address will be [journal URL]/contextEnhancer (e.g. https://ojs.yourjournal.com/contextEnhancer)"
+msgid "plugins.generic.contextEnhancer.description"
+msgstr "An OJS plugin that allows additional data to be added to the journal’s context and its publications to be shown on the frontend"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.ownerType" 
+msgid "plugins.generic.contextEnhancer.manager.settings.ownerType"
 msgstr "Owner type"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.ownerType.description" 
+msgid "plugins.generic.contextEnhancer.manager.settings.ownerType.description"
 msgstr "Choose your owner type from the list"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi" 
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "Journal's DOI"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description" 
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
 msgstr "Fill in the journal's DOI in the format 10.xxxx/xxxx (e.g. 10.1234/abcdefgh)"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh" 
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh"
 msgstr "Journal's DDH ID"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh.description" 
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh.description"
 msgstr "Fill in the journal's DDH ID number."
 
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj" 
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj"
 msgstr "Journal's DOAJ ID"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj.description" 
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj.description"
 msgstr "Fill in the journal's DOAJ ID."
 
-msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation" 
+msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "Publisher location"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.publisherName" 
+msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
 msgstr "You have filled this publisher name in the settings: <strong>{$publisherName}</strong>"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description" 
+msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
 msgstr "Select the country where the publisher is based."
 
-msgid "plugins.generic.contextEnhancer.manager.settings.keywords" 
+msgid "plugins.generic.contextEnhancer.manager.settings.keywords"
 msgstr "Journal keywords"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.keywords.description" 
+msgid "plugins.generic.contextEnhancer.manager.settings.keywords.description"
 msgstr "Enter keywords describing your journal, separated by ;"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed" 
+msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
 msgstr "Check if you are using peer reviewe process."
 
-msgid "plugins.generic.contextEnhancer.manager.settings.openAuthorship" 
+msgid "plugins.generic.contextEnhancer.manager.settings.openAuthorship"
 msgstr "Check if you have open authorship."
 
-msgid "plugins.generic.contextEnhancer.manager.settings.journalPolicy" 
+msgid "plugins.generic.contextEnhancer.manager.settings.journalPolicy"
 msgstr "Journal policy"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.diamondCategory"
 msgstr "Diamond Categories"
-       
+
 msgid "plugins.generic.contextEnhancer.manager.settings.additionalMetadata"
 msgstr "Additional Journal Metadata"
 
