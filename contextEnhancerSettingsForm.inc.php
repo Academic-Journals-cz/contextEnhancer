@@ -18,6 +18,25 @@ import('lib.pkp.classes.form.Form');
 
 class JmefSettingsForm extends Form {
 
+        const CONFIG_VARS = array(
+		'ownerType' => 'string',
+                'journalDDH' => 'string',
+                'journalDOAJ' => 'string',
+		'journalDOI' => 'string',
+		'publisherLocation' => 'string',
+		'peerReviewUsed' => 'bool',
+		'openAuthorship' => 'bool',
+		'journalKeywords' => 'string',
+	);
+        
+        const MULTILINGUAL = array(
+            'journalKeywords'
+        );
+        
+        const OWNER_TYPE = array(
+            'community'=>'community'
+        );
+        
 	/** @var int */
 	var $_contextId;
 
@@ -37,27 +56,26 @@ class JmefSettingsForm extends Form {
                 $this->_context = $context;
 
 		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
+                $this->addCheck(new FormValidatorPost($this));
+		$this->addCheck(new FormValidatorCSRF($this));
 	}
 
 	/**
 	 * Initialize form data.
 	 */
 	function initData() {
-		$this->_data = array(		
-                    'ownerType' => $this->_context->getSetting('ownerType'),
-                    'journalDOI' => $this->_context->getSetting('journalDOI'),
-                    'publisherLocation' => $this->_context->getSetting('publisherLocation'),
-                    'peerReviewUsed' => $this->_context->getSetting('peerReviewUsed'),
-                    'openAuthorship' => $this->_context->getSetting('openAuthorship'),
-                    'journalKeywords' => $this->_context->getSetting('journalKeywords')
-		);
+		$this->_data = array();
+		$context = $this->_context;
+		foreach (self::CONFIG_VARS as $configVar => $type) {
+			$this->_data[$configVar] = $context->getSetting($configVar);
+		}
 	}
 
 	/**
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('ownerType','journalDOI','publisherLocation','peerReviewUsed','openAuthorship','journalKeywords'));
+		$this->readUserVars(array_keys(self::CONFIG_VARS));
 	}
 
         /**
@@ -74,12 +92,13 @@ class JmefSettingsForm extends Form {
 		}
 		asort($countries);
                                 
-                $ownerTypes = array('community');
+                $ownerTypes = self::OWNER_TYPE;
                 
                 $templateMgr->assign('publisherName', $this->_context->getData('publisherInstitution'));  
                 $templateMgr->assign('ownerTypes', $ownerTypes);     
 		$templateMgr->assign('countries', $countries);                
 		$templateMgr->assign('pluginName', $this->_plugin->getName());
+                $templateMgr->assign('applicationName', Application::get()->getName());
 		return parent::fetch($request, $template, $display);
 	}
         
@@ -87,14 +106,20 @@ class JmefSettingsForm extends Form {
 	 * @copydoc Form::execute()
 	 */
 	function execute(...$functionArgs) {
-                $this->_context->updateSetting('ownerType', trim($this->getData('ownerType'), "\"\';"), 'string');
-                $this->_context->updateSetting('journalDOI', trim($this->getData('journalDOI'), "\"\';"), 'string');
-                $this->_context->updateSetting('publisherLocation', trim($this->getData('publisherLocation'), "\"\';"), 'string');
-                $this->_context->updateSetting('peerReviewUsed', $this->getData('peerReviewUsed'), 'bool');
-                $this->_context->updateSetting('openAuthorship', $this->getData('openAuthorship'), 'bool');
-                $this->_context->updateSetting('journalKeywords', $this->getData('journalKeywords', null), 'string', true);
-
-		parent::execute(...$functionArgs);
+                
+                $context = $this->_context;
+                
+                foreach (self::CONFIG_VARS as $configVar => $type) {                    
+                    if(key_exists($configVar, self::MULTILINGUAL)){
+                        $context->setData($configVar, $this->getData($configVar, null));   
+                    } else {
+                        $context->setData($configVar, $this->getData($configVar));  
+                    }
+                }                
+                parent::execute(...$functionArgs);
+                
+		$contextDao = DAORegistry::getDAO('JournalDAO'); /* @var $contextDao JournalDAO */
+		$contextDao->updateObject($context);
 	}
 }
 

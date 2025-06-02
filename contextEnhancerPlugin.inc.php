@@ -22,61 +22,58 @@ class JmefPlugin extends GenericPlugin {
     function register($category, $path, $mainContextId = null) {
         $success = parent::register($category, $path, $mainContextId);
         if ($success && $this->getEnabled($mainContextId)) {
-            
+
             HookRegistry::register('Schema::get::context', [$this, 'addToSchema']);
+            
             // Intercept the LoadHandler hook to present
             // jmef when requested.
             HookRegistry::register('LoadHandler', array($this, 'callbackHandleContent'));
-            
         }
         return $success;
     }
 
-     /**
+    /**
      * Extend the context entity's schema with an aditionals properties
      */
     public function addToSchema(string $hookName, array $args)
     {
       $schema = $args[0]; /** @var stdClass */
+      $schema->properties->journalKeywords = (object) [
+          'type' => 'string',
+          'multilingual' => true,
+          'validation' => ['nullable'],
+      ];
       $schema->properties->ownerType = (object) [
           'type' => 'string',
-          'apiSummary' => true,
-          'multilingual' => false,
-          'validation' => ['nullable']
+          'validation' => ['nullable'],
+      ];
+      $schema->properties->journalDDH = (object) [
+          'type' => 'string',
+          'validation' => ['nullable'],
+      ];
+      $schema->properties->journalDOAJ = (object) [
+          'type' => 'string',
+          'validation' => ['nullable'],
       ];
       $schema->properties->journalDOI = (object) [
           'type' => 'string',
-          'apiSummary' => true,
-          'multilingual' => false,
-          'validation' => ['nullable']
+          'validation' => ['nullable'],
       ];
       $schema->properties->publisherLocation = (object) [
           'type' => 'string',
-          'apiSummary' => true,
-          'multilingual' => false,
-          'validation' => ['nullable']
+          'validation' => ['nullable'],
       ];
       $schema->properties->peerReviewUsed = (object) [
           'type' => 'boolean',
-          'apiSummary' => true,
-          'multilingual' => false,
-          'validation' => ['nullable']
+          'validation' => ['nullable'],
       ];
       $schema->properties->openAuthorship = (object) [
           'type' => 'boolean',
-          'apiSummary' => true,
-          'multilingual' => false,
-          'validation' => ['nullable']
+          'validation' => ['nullable'],
       ];
-      $schema->properties->journalKeywords = (object) [
-          'type' => 'string',
-          'apiSummary' => true,
-          'multilingual' => true,
-          'validation' => ['nullable']
-      ];
-      
       return false;
     }
+
     /**
      * Declare the handler function to process the actual page 
      * @param $hookName string The name of the invoked hook
@@ -90,7 +87,7 @@ class JmefPlugin extends GenericPlugin {
         $page = & $args[0];
         $op = & $args[1];
 
-        if ($page == 'jmef'){
+        if ($page == 'jmef') {
             // Construct a path to look for
             $path = $page;
             if ($op !== 'index')
@@ -157,7 +154,6 @@ class JmefPlugin extends GenericPlugin {
 
                 $this->import('JmefSettingsForm');
                 $form = new JmefSettingsForm($this, $context);
-
                 if ($request->getUserVar('save')) {
                     $form->readInputData();
                     if ($form->validate()) {
@@ -171,4 +167,5 @@ class JmefPlugin extends GenericPlugin {
         }
         return parent::manage($args, $request);
     }
+
 }
