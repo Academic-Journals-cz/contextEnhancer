@@ -39,16 +39,21 @@ Use any available template variables to inject these  objects into the required 
 Important: Injection only depends on the availability of the template variables, not any OJS hooks.
 
 ```php
- foreach (self::CONFIG_VARS as $configVar => $type) {
+            // get the specific data from context object and add variables to the description
+            foreach (self::CONFIG_VARS as $configVar => $type) {
+
                 if($type == "bool"){
-                    $loadedData ? $loadedData = __('plugins.generic.contextEnhancer.settings.yes') : $loadedData = __('plugins.generic.contextEnhancer.settings.no');
-                } elseif (key_exists($configVar, self::MULTILINGUAL)) {
+                    $loadedData = $loadedData ? __('plugins.generic.contextEnhancer.settings.yes') : __('plugins.generic.contextEnhancer.settings.no');
+                } elseif (in_array($configVar, self::MULTILINGUAL)) {
                     $loadedData = $context->getData($configVar, $currentLocale);
+                    
                 } else {
                     $loadedData = $context->getData($configVar);
                 }
-
-                $description .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData;
+                
+                if($loadedData){
+                    $description .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData;
+                }
             }
 
 ```
