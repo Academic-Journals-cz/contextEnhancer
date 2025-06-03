@@ -53,7 +53,7 @@ Important: Injection only depends on the availability of the template variables,
                 }
                 
                 if($loadedData){
-                    $about .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData;
+                    $about .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData . "</p>";
                 }
             }
 
