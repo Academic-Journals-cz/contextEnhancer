@@ -10,12 +10,6 @@ msgstr ""
 "مكون إضافي لـ OJS يسمح بإضافة بيانات إضافية إلى سياق المجلة ومنشوراتها في "
 "الواجهة الأمامية"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.ownerType"
-msgstr "نوع المالك"
-
-msgid "plugins.generic.contextEnhancer.manager.settings.ownerType.description"
-msgstr "اختر نوع مالك من القائمة"
-
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "مجلة doi"
 
@@ -23,20 +17,6 @@ msgid ""
 "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
 msgstr ""
 "املأ DOI للمجلة بالتنسيق 10.xxxx/xxxx (على سبيل المثال 10.1234/ABCDEFGH)"
-
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh"
-msgstr "Journal's DDH ID"
-
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDdh.description"
-msgstr "املأ رقم معرف DDH للمجلة."
-
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj"
-msgstr "مجلة DOAJ ID"
-
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDoaj.description"
-msgstr "املأ معرف Doaj للمجلة."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "موقع الناشر"
@@ -58,14 +38,23 @@ msgstr "أدخل الكلمات الرئيسية التي تصف مجلتك ، �
 msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
 msgstr "تحقق مما إذا كنت تستخدم عملية مراجعة النظراء."
 
-msgid "plugins.generic.contextEnhancer.manager.settings.openAuthorship"
-msgstr "تحقق مما إذا كان لديك تأليف مفتوح."
-
-msgid "plugins.generic.contextEnhancer.manager.settings.journalPolicy"
-msgstr "سياسة المجلة"
-
-msgid "plugins.generic.contextEnhancer.manager.settings.diamondCategory"
-msgstr "فئات الماس"
-
 msgid "plugins.generic.contextEnhancer.manager.settings.additionalMetadata"
 msgstr "دفعة مجلة إضافية"
+
+msgid "plugins.generic.contextEnhancer.settings.journalDOI"
+msgstr "المجلات doi:"
+
+msgid "plugins.generic.contextEnhancer.settings.publisherLocation"
+msgstr "موقع الناشر:"
+
+msgid "plugins.generic.contextEnhancer.settings.peerReviewUsed"
+msgstr "المجلة تستخدم مراجعة النظراء:"
+
+msgid "plugins.generic.contextEnhancer.settings.yes"
+msgstr "نعم"
+
+msgid "plugins.generic.contextEnhancer.settings.yes"
+msgstr "لا"
+
+msgid "plugins.generic.contextEnhancer.settings.journalKeywords"
+msgstr "الكلمات الرئيسية المجلة:"
