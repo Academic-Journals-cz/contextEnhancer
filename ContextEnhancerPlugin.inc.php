@@ -22,7 +22,6 @@ class ContextEnhancerPlugin extends GenericPlugin {
         'peerReviewUsed' => 'bool',
         'journalKeywords' => 'string',
     );
-    
     const MULTILINGUAL = array(
         'journalKeywords'
     );
@@ -139,34 +138,38 @@ class ContextEnhancerPlugin extends GenericPlugin {
         $request = Application::get()->getRequest();
         $context = $request->getContext();
         $contextId = $context->getId();
-        
+
         // Get the currentContext object from template manager
         $currentContext = $templateMgr->getTemplateVars('currentContext');
         $currentLocale = AppLocale::getLocale();
-        
+
         $loadedData = array();
 
-        // get the specific data from context object
-        foreach (self::CONFIG_VARS as $configVar => $type) {                    
-            if(key_exists($configVar, self::MULTILINGUAL)){
-                $loadedData = $context->getData($configVar, $currentLocale);   
-            } else {
-                $loadedData = $context->getData($configVar);  
-            }
-        }   
+        // You can specify the template page where you want to do the change
+//        if ($template !== "frontend/pages/about.tpl") return false;
 
 
-        if ($template !== "frontend/pages/about.tpl") return false;
-
-        
         if ($currentContext) {
-            $aboutText = $currentContext->getLocalizedSetting('about');
+            $description = $currentContext->getLocalizedSetting('description');
 
-            // Add own text to about context part
-            $aboutText .= __('plugins.generic.disco.about.communityOwned', array('contextTitle' => $currentContext->getLocalizedData('name'), 'publisherInstitution' => $currentContext->getData('publisherInstitution'), 'organisationType' => $organisationType));
+            if ($description === null) $description = "";
+
+            // get the specific data from context object and add variables to the description
+            foreach (self::CONFIG_VARS as $configVar => $type) {
+                if($type == "bool"){
+                    $loadData ? __('plugins.generic.contextEnhancer.settings.yes') : __('plugins.generic.contextEnhancer.settings.no');
+                } elseif (key_exists($configVar, self::MULTILINGUAL)) {
+                    $loadedData = $context->getData($configVar, $currentLocale);
+                } else {
+                    $loadedData = $context->getData($configVar);
+                }
+                
+                $description .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData;
+            }
+            
 
             // Content update inside object
-            $currentContext->setData('about', $aboutText, $currentLocale);
+            $currentContext->setData('description', $description, $currentLocale);
         }
 
         // Assign whole updated object to template
