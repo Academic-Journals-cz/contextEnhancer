@@ -6,28 +6,21 @@ msgid "plugins.generic.contextEnhancer.displayName"
 msgstr "Kontextförstärkare"
 
 msgid "plugins.generic.contextEnhancer.description"
-msgstr ""
-"En OJS -plugin som gör att ytterligare data kan läggas till i tidskriftens "
-"sammanhang och dess publikationer kan visas på frontend"
+msgstr "En OJS -plugin som gör att ytterligare data kan läggas till i tidskriftens sammanhang och dess publikationer kan visas på frontend"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "Journal's doi"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
-msgstr ""
-"Fyll i tidskriftens DOI i formatet 10.xxxx/xxxx (t.ex. 10.1234/abcdefgh)"
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
+msgstr "Fyll i tidskriftens DOI i formatet 10.xxxx/xxxx (t.ex. 10.1234/abcdefgh)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "Förläggare"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
-msgstr ""
-"Du har fyllt detta utgivarnamn i inställningarna: <strong> {$ PublisherName}"
-" </strong>"
+msgstr "Du har fyllt detta utgivarnamn i inställningarna: <strong> {$ PublisherName} </strong>"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
+msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
 msgstr "Välj det land där förläggaren är baserad."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"

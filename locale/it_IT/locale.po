@@ -6,28 +6,21 @@ msgid "plugins.generic.contextEnhancer.displayName"
 msgstr "Potenziatore del contesto"
 
 msgid "plugins.generic.contextEnhancer.description"
-msgstr ""
-"Un plug -in OJS che consente di aggiungere ulteriori dati al contesto della "
-"rivista e le sue pubblicazioni di essere mostrate sul frontend"
+msgstr "Un plug -in OJS che consente di aggiungere ulteriori dati al contesto della rivista e le sue pubblicazioni di essere mostrate sul frontend"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "DOI del diario"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
-msgstr ""
-"Compila il doi del diario nel formato 10.xxxx/xxxx (ad es. 10.1234/abcdefgh)"
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
+msgstr "Compila il doi del diario nel formato 10.xxxx/xxxx (ad es. 10.1234/abcdefgh)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "Posizione dell'editore"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
-msgstr ""
-"Hai riempito questo nome editore nelle impostazioni: <strong> {$ "
-"pubblicatore} </strong>"
+msgstr "Hai riempito questo nome editore nelle impostazioni: <strong> {$ pubblicatore} </strong>"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
+msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
 msgstr "Seleziona il paese in cui si basa l'editore."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"
