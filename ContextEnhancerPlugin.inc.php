@@ -143,8 +143,6 @@ class ContextEnhancerPlugin extends GenericPlugin {
         $currentContext = $templateMgr->getTemplateVars('currentContext');
         $currentLocale = AppLocale::getLocale();
 
-        $loadedData = array();
-
         // You can specify the template page where you want to do the change
 //        if ($template !== "frontend/pages/about.tpl") return false;
 
@@ -157,7 +155,7 @@ class ContextEnhancerPlugin extends GenericPlugin {
             // get the specific data from context object and add variables to the description
             foreach (self::CONFIG_VARS as $configVar => $type) {
                 if($type == "bool"){
-                    $loadData ? __('plugins.generic.contextEnhancer.settings.yes') : __('plugins.generic.contextEnhancer.settings.no');
+                    $loadedData ? __('plugins.generic.contextEnhancer.settings.yes') : __('plugins.generic.contextEnhancer.settings.no');
                 } elseif (key_exists($configVar, self::MULTILINGUAL)) {
                     $loadedData = $context->getData($configVar, $currentLocale);
                 } else {
