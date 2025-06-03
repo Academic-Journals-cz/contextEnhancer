@@ -10,12 +10,6 @@ msgstr ""
 "Ein OJS -Plugin, mit dem zusätzliche Daten in den Kontext des Journals und "
 "seine Veröffentlichungen auf dem Frontend hinzugefügt werden können"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.ownerType"
-msgstr "Eigentümertyp"
-
-msgid "plugins.generic.contextEnhancer.manager.settings.ownerType.description"
-msgstr "Wählen Sie Ihren Eigentümertyp aus der Liste aus"
-
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "DOI von Journal"
 
@@ -24,20 +18,6 @@ msgid ""
 msgstr ""
 "Füllen Sie das DOI des Journals im Format 10.xxxx/xxxx aus (z. B. "
 "10.1234/abcdefgh)"
-
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh"
-msgstr "Dieses Journal davon"
-
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDdh.description"
-msgstr "Füllen Sie die DDH -ID -Nummer des Journals aus."
-
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj"
-msgstr "DOAJ ID des Journals"
-
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDoaj.description"
-msgstr "Füllen Sie die DOAJ -ID des Journals aus."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "Verlagsort"
@@ -61,14 +41,23 @@ msgstr ""
 msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
 msgstr "Überprüfen Sie, ob Sie Peer Review -Prozess verwenden."
 
-msgid "plugins.generic.contextEnhancer.manager.settings.openAuthorship"
-msgstr "Überprüfen Sie, ob Sie eine offene Urheberschaft haben."
-
-msgid "plugins.generic.contextEnhancer.manager.settings.journalPolicy"
-msgstr "Journalpolitik"
-
-msgid "plugins.generic.contextEnhancer.manager.settings.diamondCategory"
-msgstr "Diamantkategorien"
-
 msgid "plugins.generic.contextEnhancer.manager.settings.additionalMetadata"
 msgstr "Zusätzliche Journalmetadaten"
+
+msgid "plugins.generic.contextEnhancer.settings.journalDOI"
+msgstr "Zeitschriften doi:"
+
+msgid "plugins.generic.contextEnhancer.settings.publisherLocation"
+msgstr "Verlagsort:"
+
+msgid "plugins.generic.contextEnhancer.settings.peerReviewUsed"
+msgstr "Journal verwendet Peer Review:"
+
+msgid "plugins.generic.contextEnhancer.settings.yes"
+msgstr "Ja"
+
+msgid "plugins.generic.contextEnhancer.settings.yes"
+msgstr "NEIN"
+
+msgid "plugins.generic.contextEnhancer.settings.journalKeywords"
+msgstr "Journal -Schlüsselwörter:"
