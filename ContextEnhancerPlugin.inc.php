@@ -171,7 +171,7 @@ class ContextEnhancerPlugin extends GenericPlugin {
                 }
                 
                 if($loadedData){
-                    $aboutText .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData;
+                    $aboutText .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData . "</p>";
                 }
             }
             

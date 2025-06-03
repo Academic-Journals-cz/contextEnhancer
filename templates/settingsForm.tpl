@@ -34,7 +34,7 @@
             {/fbvFormSection}
             
              
-            {fbvFormSection list=true title="plugins.generic.contextEnhancer.manager.settings.journalPolicy"}   
+            {fbvFormSection list=true}   
                 {if $peerReviewUsed}
                         {assign var="checked" value=true}
                 {else}

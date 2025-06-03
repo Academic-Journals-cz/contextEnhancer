@@ -99,7 +99,7 @@ class ContextEnhancerSettingsForm extends Form {
                 $context = $this->_context;
                 
                 foreach (self::CONFIG_VARS as $configVar => $type) {                    
-                    if(key_exists($configVar, self::MULTILINGUAL)){
+                    if(in_array($configVar, self::MULTILINGUAL)){
                         $context->setData($configVar, $this->getData($configVar, null));   
                     } else {
                         $context->setData($configVar, $this->getData($configVar));  
