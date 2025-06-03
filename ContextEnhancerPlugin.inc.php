@@ -148,9 +148,9 @@ class ContextEnhancerPlugin extends GenericPlugin {
 
 
         if ($currentContext) {
-            $description = $currentContext->getLocalizedSetting('description');
+            $aboutText = $currentContext->getLocalizedSetting('about');
 
-            if ($description === null) $description = "";
+            if ($aboutText === null) $aboutText = "";
 
             // get the specific data from context object and add variables to the description
             foreach (self::CONFIG_VARS as $configVar => $type) {
@@ -164,14 +164,20 @@ class ContextEnhancerPlugin extends GenericPlugin {
                     $loadedData = $context->getData($configVar);
                 }
                 
+                /* Publisher location */
+                if ($configVar == "publisherLocation") {
+                        $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+                        $loadedData = $isoCodes->getCountries()->getByAlpha2($loadedData)->getLocalName();
+                }
+                
                 if($loadedData){
-                    $description .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData;
+                    $aboutText .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData;
                 }
             }
             
 
             // Content update inside object
-            $currentContext->setData('description', $description, $currentLocale);
+            $currentContext->setData('about', $aboutText, $currentLocale);
         }
 
         // Assign whole updated object to template

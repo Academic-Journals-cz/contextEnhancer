@@ -30,7 +30,8 @@ Click on the plugin settings and activate the needed metadata fields
 #### Injecting the variables into the current context object
 - Info: Method `injectContextObject` injects the metadata to the context settings table
 - The conditional statement comparing [template name](https://github.com/withanage/contextEnhancer/blob/stable-3_3_0/ContextEnhancerPlugin.inc.php)  e.g. `if ($template !== "frontend/pages/about.tpl") ` adds the  information to the needed template.
-- Specify  the name of the template page, you require.
+- Specify the name of the template page, you require if you need to, or the method will be modifying the context object all the time
+- Use context variable for adding the new metadata. Plugin needs existing context variables (like: “description”, “about” , “authorInformation”, or even “customHeaders” and many others.)
 
 #### Customized displaying of the variables
 Current implementation inside method  `injectContextObject` adds the variables into  the description  of the context.
@@ -52,7 +53,7 @@ Important: Injection only depends on the availability of the template variables,
                 }
                 
                 if($loadedData){
-                    $description .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData;
+                    $about .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData . "</p>";
                 }
             }
 
@@ -73,10 +74,9 @@ PHP 8.2 or greater.
 Support for OJS 3.3.0
 
 ### Developed by
-- Radek Gomola (Masaryk University Press)
+- Radek Gomola (Lead, Masaryk University Press)
 - Dulip Withanage (TIB)
 - Rob Arnold (Ubiquity Press)
 
 ### Additional information
-- This plugin was developed in PKP Sprint 2025, Oslo, Norway based on the previous work  for CRAFT-OA Diamond plugins by Radek Gomola.
--
+- This template plugin was developed in PKP Sprint 2025, Oslo, Norway based on the previous work for CRAFT-OA Diamond plugins made by Radek Gomola.
