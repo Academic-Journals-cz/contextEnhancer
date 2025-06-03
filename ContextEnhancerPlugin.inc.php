@@ -155,7 +155,7 @@ class ContextEnhancerPlugin extends GenericPlugin {
             // get the specific data from context object and add variables to the description
             foreach (self::CONFIG_VARS as $configVar => $type) {
                 if($type == "bool"){
-                    $loadedData ? __('plugins.generic.contextEnhancer.settings.yes') : __('plugins.generic.contextEnhancer.settings.no');
+                    $loadedData ? $loadedData = __('plugins.generic.contextEnhancer.settings.yes') : $loadedData = __('plugins.generic.contextEnhancer.settings.no');
                 } elseif (key_exists($configVar, self::MULTILINGUAL)) {
                     $loadedData = $context->getData($configVar, $currentLocale);
                 } else {
