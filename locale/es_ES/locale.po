@@ -10,12 +10,6 @@ msgstr ""
 "Un complemento OJS que permite agregar datos adicionales al contexto de la "
 "revista y sus publicaciones se muestran en el frontend"
 
-msgid "plugins.generic.contextEnhancer.manager.settings.ownerType"
-msgstr "Tipo de propietario"
-
-msgid "plugins.generic.contextEnhancer.manager.settings.ownerType.description"
-msgstr "Elija su tipo de propietario en la lista"
-
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "Doi del diario"
 
@@ -24,20 +18,6 @@ msgid ""
 msgstr ""
 "Complete el DOI del diario en el formato 10.xxxx/xxxx (por ejemplo, "
 "10.1234/abcdefgh)"
-
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDdh"
-msgstr "Este diario de este"
-
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDdh.description"
-msgstr "Complete el número de identificación DDH del diario."
-
-msgid "plugins.generic.contextEnhancer.manager.settings.journalDoaj"
-msgstr "ID de DOAJ del diario"
-
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDoaj.description"
-msgstr "Complete la identificación DOAJ del diario."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "Ubicación del editor"
@@ -60,14 +40,23 @@ msgstr "Ingrese palabras clave que describan su diario, separadas por;"
 msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
 msgstr "Compruebe si está utilizando el proceso de revisión por pares."
 
-msgid "plugins.generic.contextEnhancer.manager.settings.openAuthorship"
-msgstr "Compruebe si tiene autoría abierta."
-
-msgid "plugins.generic.contextEnhancer.manager.settings.journalPolicy"
-msgstr "Política de revista"
-
-msgid "plugins.generic.contextEnhancer.manager.settings.diamondCategory"
-msgstr "Categorías de diamantes"
-
 msgid "plugins.generic.contextEnhancer.manager.settings.additionalMetadata"
 msgstr "Metadatos de revista adicionales"
+
+msgid "plugins.generic.contextEnhancer.settings.journalDOI"
+msgstr "Revistas doi:"
+
+msgid "plugins.generic.contextEnhancer.settings.publisherLocation"
+msgstr "Ubicación del editor:"
+
+msgid "plugins.generic.contextEnhancer.settings.peerReviewUsed"
+msgstr "El diario está utilizando la revisión por pares:"
+
+msgid "plugins.generic.contextEnhancer.settings.yes"
+msgstr "Sí"
+
+msgid "plugins.generic.contextEnhancer.settings.yes"
+msgstr "No"
+
+msgid "plugins.generic.contextEnhancer.settings.journalKeywords"
+msgstr "Palabras clave del diario:"
