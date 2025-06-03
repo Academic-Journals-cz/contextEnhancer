@@ -19,22 +19,14 @@ import('lib.pkp.classes.form.Form');
 class ContextEnhancerSettingsForm extends Form {
 
         const CONFIG_VARS = array(
-		'ownerType' => 'string',
-                'journalDDH' => 'string',
-                'journalDOAJ' => 'string',
 		'journalDOI' => 'string',
 		'publisherLocation' => 'string',
 		'peerReviewUsed' => 'bool',
-		'openAuthorship' => 'bool',
 		'journalKeywords' => 'string',
 	);
         
         const MULTILINGUAL = array(
             'journalKeywords'
-        );
-        
-        const OWNER_TYPE = array(
-            'community'=>'community'
         );
         
 	/** @var int */
@@ -91,11 +83,8 @@ class ContextEnhancerSettingsForm extends Form {
 			$countries[$country->getAlpha2()] = $country->getLocalName();
 		}
 		asort($countries);
-                                
-                $ownerTypes = self::OWNER_TYPE;
                 
                 $templateMgr->assign('publisherName', $this->_context->getData('publisherInstitution'));  
-                $templateMgr->assign('ownerTypes', $ownerTypes);     
 		$templateMgr->assign('countries', $countries);                
 		$templateMgr->assign('pluginName', $this->_plugin->getName());
                 $templateMgr->assign('applicationName', Application::get()->getName());

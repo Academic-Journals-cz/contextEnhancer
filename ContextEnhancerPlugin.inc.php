@@ -16,6 +16,17 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ContextEnhancerPlugin extends GenericPlugin {
 
+    const CONFIG_VARS = array(
+        'journalDOI' => 'string',
+        'publisherLocation' => 'string',
+        'peerReviewUsed' => 'bool',
+        'journalKeywords' => 'string',
+    );
+    
+    const MULTILINGUAL = array(
+        'journalKeywords'
+    );
+
     /**
      * @copydoc Plugin::register()
      */
@@ -23,9 +34,11 @@ class ContextEnhancerPlugin extends GenericPlugin {
         $success = parent::register($category, $path, $mainContextId);
         if ($success && $this->getEnabled($mainContextId)) {
 
+            //adds new metadata to context schema
             HookRegistry::register('Schema::get::context', [$this, 'addToSchema']);
-            
 
+            //injects context object with specific metadata. Enhancing the displayed informations.
+            HookRegistry::register('TemplateManager::display', [$this, 'injectContextObject']);
         }
         return $success;
     }
@@ -33,63 +46,46 @@ class ContextEnhancerPlugin extends GenericPlugin {
     /**
      * Extend the context entity's schema with an aditionals properties
      */
-    public function addToSchema(string $hookName, array $args)
-    {
-      $schema = $args[0]; /** @var stdClass */
-      $schema->properties->journalKeywords = (object) [
-          'type' => 'string',
-          'multilingual' => true,
-          'validation' => ['nullable'],
-      ];
-      $schema->properties->ownerType = (object) [
-          'type' => 'string',
-          'validation' => ['nullable'],
-      ];
-      $schema->properties->journalDDH = (object) [
-          'type' => 'string',
-          'validation' => ['nullable'],
-      ];
-      $schema->properties->journalDOAJ = (object) [
-          'type' => 'string',
-          'validation' => ['nullable'],
-      ];
-      $schema->properties->journalDOI = (object) [
-          'type' => 'string',
-          'validation' => ['nullable'],
-      ];
-      $schema->properties->publisherLocation = (object) [
-          'type' => 'string',
-          'validation' => ['nullable'],
-      ];
-      $schema->properties->peerReviewUsed = (object) [
-          'type' => 'boolean',
-          'validation' => ['nullable'],
-      ];
-      $schema->properties->openAuthorship = (object) [
-          'type' => 'boolean',
-          'validation' => ['nullable'],
-      ];
-      return false;
+    public function addToSchema(string $hookName, array $args) {
+        $schema = $args[0];/** @var stdClass */
+        $schema->properties->journalKeywords = (object) [
+                    'type' => 'string',
+                    'multilingual' => true,
+                    'validation' => ['nullable'],
+        ];
+        $schema->properties->journalDOI = (object) [
+                    'type' => 'string',
+                    'validation' => ['nullable'],
+        ];
+        $schema->properties->publisherLocation = (object) [
+                    'type' => 'string',
+                    'validation' => ['nullable'],
+        ];
+        $schema->properties->peerReviewUsed = (object) [
+                    'type' => 'boolean',
+                    'validation' => ['nullable'],
+        ];
+        return false;
     }
 
     /**
      * @copydoc Plugin::getDisplayName()
      */
-    function getDisplayName() {
+    public function getDisplayName() {
         return __('plugins.generic.contextEnhancer.displayName');
     }
 
     /**
      * @copydoc Plugin::getDescription()
      */
-    function getDescription() {
+    public function getDescription() {
         return __('plugins.generic.contextEnhancer.description');
     }
 
     /**
      * @copydoc Plugin::getActions()
      */
-    function getActions($request, $verb) {
+    public function getActions($request, $verb) {
         $router = $request->getRouter();
         import('lib.pkp.classes.linkAction.request.AjaxModal');
         return array_merge(
@@ -111,7 +107,7 @@ class ContextEnhancerPlugin extends GenericPlugin {
     /**
      * @copydoc Plugin::manage()
      */
-    function manage($args, $request) {
+    public function manage($args, $request) {
         switch ($request->getUserVar('verb')) {
             case 'settings':
                 $context = $request->getContext();
@@ -134,6 +130,51 @@ class ContextEnhancerPlugin extends GenericPlugin {
                 return new JSONMessage(true, $form->fetch($request));
         }
         return parent::manage($args, $request);
+    }
+
+    public function injectContextObject($hookName, $args) {
+        $templateMgr = $args[0];
+        $template = $args[1];
+
+        $request = Application::get()->getRequest();
+        $context = $request->getContext();
+        $contextId = $context->getId();
+        
+        // Get the currentContext object from template manager
+        $currentContext = $templateMgr->getTemplateVars('currentContext');
+        $currentLocale = AppLocale::getLocale();
+        
+        $loadedData = array();
+
+        // get the specific data from context object
+        foreach (self::CONFIG_VARS as $configVar => $type) {                    
+            if(key_exists($configVar, self::MULTILINGUAL)){
+                $loadedData = $context->getData($configVar, $currentLocale);   
+            } else {
+                $loadedData = $context->getData($configVar);  
+            }
+        }   
+
+
+        if ($template !== "frontend/pages/about.tpl") return false;
+
+        
+        if ($currentContext) {
+            $aboutText = $currentContext->getLocalizedSetting('about');
+
+            // Add own text to about context part
+            $aboutText .= __('plugins.generic.disco.about.communityOwned', array('contextTitle' => $currentContext->getLocalizedData('name'), 'publisherInstitution' => $currentContext->getData('publisherInstitution'), 'organisationType' => $organisationType));
+
+            // Content update inside object
+            $currentContext->setData('about', $aboutText, $currentLocale);
+        }
+
+        // Assign whole updated object to template
+        $templateMgr->assign(array(
+            'currentContext' => $currentContext,
+        ));
+
+        return false;
     }
 
 }

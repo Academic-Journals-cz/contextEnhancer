@@ -18,11 +18,8 @@
     {csrf}
     {fbvFormArea id="contextEnhancerSettingsFormArea"}
 
-            {fbvFormSection for="ownerType" title="plugins.generic.contextEnhancer.manager.settings.ownerType"}
-                    {fbvElement type="select" label="plugins.generic.contextEnhancer.manager.settings.ownerType.description" name="ownerType" id="ownerType" defaultLabel="" defaultValue="" from=$ownerTypes selected=$ownerType translate="0" size=$fbvStyles.size.MEDIUM}
-            {/fbvFormSection}  
             
-            {fbvFormSection for="ownerType" title="plugins.generic.contextEnhancer.manager.settings.journalDoi"}
+            {fbvFormSection for="journalDOI" title="plugins.generic.contextEnhancer.manager.settings.journalDoi"}
                     {fbvElement type="text" id="journalDOI" value=$journalDOI label="plugins.generic.contextEnhancer.manager.settings.journalDoi.description" size=$fbvStyles.size.MEDIUM}     
             {/fbvFormSection} 
             
@@ -44,13 +41,6 @@
                         {assign var="checked" value=false}
                 {/if}
                 {fbvElement type="checkbox" name="peerReviewUsed" id="peerReviewUsed" checked=$checked label="plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"}
-            
-                {if $openAuthorship}
-                        {assign var="checked" value=true}
-                {else}
-                        {assign var="checked" value=false}
-                {/if}                
-                {fbvElement type="checkbox" name="openAuthorship" id="openAuthorship" checked=$checked label="plugins.generic.contextEnhancer.manager.settings.openAuthorship"} 
             {/fbvFormSection}
     {/fbvFormArea}
     {fbvFormButtons submitText="common.save"}
