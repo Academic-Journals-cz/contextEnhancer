@@ -42,7 +42,7 @@ msgid "plugins.generic.contextEnhancer.settings.publisherLocation"
 msgstr "Publisher location: "
 
 msgid "plugins.generic.contextEnhancer.settings.peerReviewUsed"
-msgstr "Journal is using peer review"
+msgstr "Journal is using peer review: "
 
 msgid "plugins.generic.contextEnhancer.settings.yes"
 msgstr "yes"
