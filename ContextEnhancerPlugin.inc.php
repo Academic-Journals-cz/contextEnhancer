@@ -156,6 +156,7 @@ class ContextEnhancerPlugin extends GenericPlugin {
             foreach (self::CONFIG_VARS as $configVar => $type) {
 
                 if($type == "bool"){
+                    $loadedData = (bool) $context->getData($configVar);
                     $loadedData = $loadedData ? __('plugins.generic.contextEnhancer.settings.yes') : __('plugins.generic.contextEnhancer.settings.no');
                 } elseif (in_array($configVar, self::MULTILINGUAL)) {
                     $loadedData = $context->getData($configVar, $currentLocale);

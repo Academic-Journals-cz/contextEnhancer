@@ -47,7 +47,7 @@ msgstr "المجلة تستخدم مراجعة النظراء:"
 msgid "plugins.generic.contextEnhancer.settings.yes"
 msgstr "نعم"
 
-msgid "plugins.generic.contextEnhancer.settings.yes"
+msgid "plugins.generic.contextEnhancer.settings.no"
 msgstr "لا"
 
 msgid "plugins.generic.contextEnhancer.settings.journalKeywords"

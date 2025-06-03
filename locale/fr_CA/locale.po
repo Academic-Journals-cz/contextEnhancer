@@ -47,7 +47,7 @@ msgstr "Journal utilise l'examen par les pairs:"
 msgid "plugins.generic.contextEnhancer.settings.yes"
 msgstr "Oui"
 
-msgid "plugins.generic.contextEnhancer.settings.yes"
+msgid "plugins.generic.contextEnhancer.settings.no"
 msgstr "Non"
 
 msgid "plugins.generic.contextEnhancer.settings.journalKeywords"

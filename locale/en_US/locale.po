@@ -47,7 +47,7 @@ msgstr "Journal is using peer review:"
 msgid "plugins.generic.contextEnhancer.settings.yes"
 msgstr "yes"
 
-msgid "plugins.generic.contextEnhancer.settings.yes"
+msgid "plugins.generic.contextEnhancer.settings.no"
 msgstr "no"
 
 msgid "plugins.generic.contextEnhancer.settings.journalKeywords"

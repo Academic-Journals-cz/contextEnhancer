@@ -47,7 +47,7 @@ msgstr "El diario está utilizando la revisión por pares:"
 msgid "plugins.generic.contextEnhancer.settings.yes"
 msgstr "Sí"
 
-msgid "plugins.generic.contextEnhancer.settings.yes"
+msgid "plugins.generic.contextEnhancer.settings.no"
 msgstr "No"
 
 msgid "plugins.generic.contextEnhancer.settings.journalKeywords"

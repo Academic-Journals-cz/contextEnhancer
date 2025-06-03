@@ -47,7 +47,7 @@ msgstr "Il diario sta usando la revisione tra pari:"
 msgid "plugins.generic.contextEnhancer.settings.yes"
 msgstr "SÌ"
 
-msgid "plugins.generic.contextEnhancer.settings.yes"
+msgid "plugins.generic.contextEnhancer.settings.no"
 msgstr "NO"
 
 msgid "plugins.generic.contextEnhancer.settings.journalKeywords"
