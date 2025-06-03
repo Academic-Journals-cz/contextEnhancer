@@ -6,29 +6,21 @@ msgid "plugins.generic.contextEnhancer.displayName"
 msgstr "Contextverbeteraar"
 
 msgid "plugins.generic.contextEnhancer.description"
-msgstr ""
-"Een OJS -plug -in waarmee aanvullende gegevens aan de context van het "
-"tijdschrift kunnen worden toegevoegd en haar publicaties op de frontend "
-"kunnen worden getoond"
+msgstr "Een OJS -plug -in waarmee aanvullende gegevens aan de context van het tijdschrift kunnen worden toegevoegd en haar publicaties op de frontend kunnen worden getoond"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "Journal's doi"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
-msgstr ""
-"Vul het Journal's DOI in het formaat 10.xxxx/xxxx (bijv. 10.1234/abcdefgh)"
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
+msgstr "Vul het Journal's DOI in het formaat 10.xxxx/xxxx (bijv. 10.1234/abcdefgh)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "Uitgever locatie"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
-msgstr ""
-"U hebt deze naam van deze uitgever ingevuld in de instellingen: <strong> {$ "
-"publishername} </strong>"
+msgstr "U hebt deze naam van deze uitgever ingevuld in de instellingen: <strong> {$ publishername} </strong>"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
+msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
 msgstr "Selecteer het land waar de uitgever is gevestigd."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"

@@ -6,28 +6,21 @@ msgid "plugins.generic.contextEnhancer.displayName"
 msgstr "Context Enhancer"
 
 msgid "plugins.generic.contextEnhancer.description"
-msgstr ""
-"An OJS plugin that allows additional data to be added to the journal’s "
-"context and its publications to be shown on the frontend"
+msgstr "An OJS plugin that allows additional data to be added to the journal’s context and its publications to be shown on the frontend"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "Journal's DOI"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
-msgstr ""
-"Fill in the journal's DOI in the format 10.xxxx/xxxx (e.g. 10.1234/abcdefgh)"
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
+msgstr "Fill in the journal's DOI in the format 10.xxxx/xxxx (e.g. 10.1234/abcdefgh)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "Publisher location"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
-msgstr ""
-"You have filled this publisher name in the settings: "
-"<strong>{$publisherName}</strong>"
+msgstr "You have filled this publisher name in the settings: <strong>{$publisherName}</strong>"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
+msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
 msgstr "Select the country where the publisher is based."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"

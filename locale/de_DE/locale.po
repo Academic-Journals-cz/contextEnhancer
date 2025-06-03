@@ -6,37 +6,28 @@ msgid "plugins.generic.contextEnhancer.displayName"
 msgstr "Kontextverstärker"
 
 msgid "plugins.generic.contextEnhancer.description"
-msgstr ""
-"Ein OJS -Plugin, mit dem zusätzliche Daten in den Kontext des Journals und "
-"seine Veröffentlichungen auf dem Frontend hinzugefügt werden können"
+msgstr "Ein OJS -Plugin, mit dem zusätzliche Daten in den Kontext des Journals und seine Veröffentlichungen auf dem Frontend hinzugefügt werden können"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "DOI von Journal"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
-msgstr ""
-"Füllen Sie das DOI des Journals im Format 10.xxxx/xxxx aus (z. B. "
-"10.1234/abcdefgh)"
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
+msgstr "Füllen Sie das DOI des Journals im Format 10.xxxx/xxxx aus (z. B. 10.1234/abcdefgh)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "Verlagsort"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
-msgstr ""
-"Sie haben diesen Publisher -Namen in den Einstellungen gefüllt: <strong> {$ "
-"Publishername} </strong>"
+msgstr "Sie haben diesen Publisher -Namen in den Einstellungen gefüllt: <strong> {$ Publishername} </strong>"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
+msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
 msgstr "Wählen Sie das Land aus, in dem der Verlag basiert."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"
 msgstr "Journal -Schlüsselwörter"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords.description"
-msgstr ""
-"Geben Sie Schlüsselwörter ein, die Ihr Tagebuch beschreiben, getrennt von;"
+msgstr "Geben Sie Schlüsselwörter ein, die Ihr Tagebuch beschreiben, getrennt von;"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
 msgstr "Überprüfen Sie, ob Sie Peer Review -Prozess verwenden."

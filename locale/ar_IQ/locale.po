@@ -6,27 +6,21 @@ msgid "plugins.generic.contextEnhancer.displayName"
 msgstr "مُحسّن السياق"
 
 msgid "plugins.generic.contextEnhancer.description"
-msgstr ""
-"مكون إضافي لـ OJS يسمح بإضافة بيانات إضافية إلى سياق المجلة ومنشوراتها في "
-"الواجهة الأمامية"
+msgstr "مكون إضافي لـ OJS يسمح بإضافة بيانات إضافية إلى سياق المجلة ومنشوراتها في الواجهة الأمامية"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
 msgstr "مجلة doi"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
-msgstr ""
-"املأ DOI للمجلة بالتنسيق 10.xxxx/xxxx (على سبيل المثال 10.1234/ABCDEFGH)"
+msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
+msgstr "املأ DOI للمجلة بالتنسيق 10.xxxx/xxxx (على سبيل المثال 10.1234/ABCDEFGH)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
 msgstr "موقع الناشر"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
-msgstr ""
-"لقد ملأت اسم الناشر هذا في الإعدادات: <strong> {$ publishername} </strong>"
+msgstr "لقد ملأت اسم الناشر هذا في الإعدادات: <strong> {$ publishername} </strong>"
 
-msgid ""
-"plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
+msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
 msgstr "حدد البلد الذي يوجد فيه الناشر."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"
