@@ -1,54 +1,54 @@
 #
 msgid ""
-msgstr "Language: de_DE\n"
+msgstr "Language: nl\n"
 
 msgid "plugins.generic.contextEnhancer.displayName"
-msgstr "Kontextverstärker"
+msgstr "Contextverbeteraar"
 
 msgid "plugins.generic.contextEnhancer.description"
-msgstr "Ein OJS -Plugin, mit dem zusätzliche Daten in den Kontext des Journals und seine Veröffentlichungen auf dem Frontend hinzugefügt werden können"
+msgstr "Een OJS -plug -in waarmee aanvullende gegevens aan de context van het tijdschrift kunnen worden toegevoegd en haar publicaties op de frontend kunnen worden getoond"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
-msgstr "DOI von Journal"
+msgstr "Journal's doi"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
-msgstr "Füllen Sie das DOI des Journals im Format 10.xxxx/xxxx aus (z. B. 10.1234/abcdefgh)"
+msgstr "Vul het Journal's DOI in het formaat 10.xxxx/xxxx (bijv. 10.1234/abcdefgh)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
-msgstr "Verlagsort"
+msgstr "Uitgever locatie"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
-msgstr "Sie haben diesen Publisher -Namen in den Einstellungen gefüllt: <strong> {$ Publishername} </strong>"
+msgstr "U hebt deze naam van deze uitgever ingevuld in de instellingen: <strong> {$ publishername} </strong>"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
-msgstr "Wählen Sie das Land aus, in dem der Verlag basiert."
+msgstr "Selecteer het land waar de uitgever is gevestigd."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"
-msgstr "Journal -Schlüsselwörter"
+msgstr "Journal trefwoorden"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords.description"
-msgstr "Geben Sie Schlüsselwörter ein, die Ihr Tagebuch beschreiben, getrennt von;"
+msgstr "Voer trefwoorden in die uw dagboek beschrijven, gescheiden door;"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
-msgstr "Überprüfen Sie, ob Sie Peer Review -Prozess verwenden."
+msgstr "Controleer of u een peer review -proces gebruikt."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.additionalMetadata"
-msgstr "Zusätzliche Journalmetadaten"
+msgstr "Extra tijdschriftmetadata"
 
 msgid "plugins.generic.contextEnhancer.settings.journalDOI"
-msgstr "Zeitschriften doi:"
+msgstr "Journals doi:"
 
 msgid "plugins.generic.contextEnhancer.settings.publisherLocation"
-msgstr "Verlagsort:"
+msgstr "Uitgever Locatie:"
 
 msgid "plugins.generic.contextEnhancer.settings.peerReviewUsed"
-msgstr "Journal verwendet Peer Review:"
+msgstr "Journal gebruikt peer review:"
 
 msgid "plugins.generic.contextEnhancer.settings.yes"
 msgstr "Ja"
 
 msgid "plugins.generic.contextEnhancer.settings.no"
-msgstr "NEIN"
+msgstr "Nee"
 
 msgid "plugins.generic.contextEnhancer.settings.journalKeywords"
-msgstr "Journal -Schlüsselwörter:"
+msgstr "Journal trefwoorden:"

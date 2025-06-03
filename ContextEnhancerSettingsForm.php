@@ -13,6 +13,15 @@
 
 // $Id$
 
+namespace APP\plugins\generic\contextEnhancer;
+
+use APP\core\Application;
+use APP\journal\JournalDAO;
+use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
+use PKP\form\Form;
+use \PKP\form\validation\FormValidatorPost;
+use \PKP\form\validation\FormValidatorCSRF;
 
 import('lib.pkp.classes.form.Form');
 
@@ -24,20 +33,20 @@ class ContextEnhancerSettingsForm extends Form {
 		'peerReviewUsed' => 'bool',
 		'journalKeywords' => 'string',
 	);
-        
+
         const MULTILINGUAL = array(
             'journalKeywords'
         );
-        
+
 	/** @var int */
 	var $_contextId;
 
 	/** @var object */
 	var $_plugin;
-        
+
         /** @var context **/
         var $_context;
-        
+
 	/**
 	 * Constructor
 	 * @param $plugin object
@@ -75,38 +84,38 @@ class ContextEnhancerSettingsForm extends Form {
 	 */
 	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
-                
-                
+
+
                 $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
 		$countries = array();
 		foreach ($isoCodes->getCountries() as $country) {
 			$countries[$country->getAlpha2()] = $country->getLocalName();
 		}
 		asort($countries);
-                
-                $templateMgr->assign('publisherName', $this->_context->getData('publisherInstitution'));  
-		$templateMgr->assign('countries', $countries);                
+
+                $templateMgr->assign('publisherName', $this->_context->getData('publisherInstitution'));
+		$templateMgr->assign('countries', $countries);
 		$templateMgr->assign('pluginName', $this->_plugin->getName());
                 $templateMgr->assign('applicationName', Application::get()->getName());
 		return parent::fetch($request, $template, $display);
 	}
-        
+
         /**
 	 * @copydoc Form::execute()
 	 */
 	function execute(...$functionArgs) {
-                
+
                 $context = $this->_context;
-                
-                foreach (self::CONFIG_VARS as $configVar => $type) {                    
+
+                foreach (self::CONFIG_VARS as $configVar => $type) {
                     if(in_array($configVar, self::MULTILINGUAL)){
-                        $context->setData($configVar, $this->getData($configVar, null));   
+                        $context->setData($configVar, $this->getData($configVar, null));
                     } else {
-                        $context->setData($configVar, $this->getData($configVar));  
+                        $context->setData($configVar, $this->getData($configVar));
                     }
-                }                
+                }
                 parent::execute(...$functionArgs);
-                
+
 		$contextDao = DAORegistry::getDAO('JournalDAO'); /* @var $contextDao JournalDAO */
 		$contextDao->updateObject($context);
 	}

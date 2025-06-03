@@ -12,6 +12,19 @@
  *
  * @brief Journal Metadata Exchange Format plugin class
  */
+
+namespace APP\plugins\generic\contextEnhancer;
+
+use APP\core\Application;
+use APP\template\TemplateManager;
+use APP\plugins\generic\contextEnhancer\ContextEnhancerSettingsForm;
+use PKP\core\JSONMessage;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
+use PKP\facades\Locale;
+
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class ContextEnhancerPlugin extends GenericPlugin {
@@ -34,10 +47,10 @@ class ContextEnhancerPlugin extends GenericPlugin {
         if ($success && $this->getEnabled($mainContextId)) {
 
             //adds new metadata to context schema
-            HookRegistry::register('Schema::get::context', [$this, 'addToSchema']);
+            Hook::add('Schema::get::context', [$this, 'addToSchema']);
 
             //injects context object with specific metadata. Enhancing the displayed informations.
-            HookRegistry::register('TemplateManager::display', [$this, 'injectContextObject']);
+            Hook::add('TemplateManager::display', [$this, 'injectContextObject']);
         }
         return $success;
     }
@@ -111,11 +124,9 @@ class ContextEnhancerPlugin extends GenericPlugin {
             case 'settings':
                 $context = $request->getContext();
 
-                AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_MANAGER);
                 $templateMgr = TemplateManager::getManager($request);
                 $templateMgr->registerPlugin('function', 'plugin_url', array($this, 'smartyPluginUrl'));
 
-                $this->import('ContextEnhancerSettingsForm');
                 $form = new ContextEnhancerSettingsForm($this, $context);
                 if ($request->getUserVar('save')) {
                     $form->readInputData();
@@ -141,8 +152,8 @@ class ContextEnhancerPlugin extends GenericPlugin {
 
         // Get the currentContext object from template manager
         $currentContext = $templateMgr->getTemplateVars('currentContext');
-        $currentLocale = AppLocale::getLocale();
-        
+        $currentLocale = Locale::getLocale();
+
         // You can specify the template page where you want to do the change
 //        if ($template !== "frontend/pages/about.tpl") return false;
 
@@ -154,28 +165,27 @@ class ContextEnhancerPlugin extends GenericPlugin {
 
             // get the specific data from context object and add variables to the description
             foreach (self::CONFIG_VARS as $configVar => $type) {
-
                 if($type == "bool"){
                     $loadedData = (bool) $context->getData($configVar);
                     $loadedData = $loadedData ? __('plugins.generic.contextEnhancer.settings.yes') : __('plugins.generic.contextEnhancer.settings.no');
                 } elseif (in_array($configVar, self::MULTILINGUAL)) {
                     $loadedData = $context->getData($configVar, $currentLocale);
-                    
+
                 } else {
                     $loadedData = $context->getData($configVar);
                 }
-                
+
                 /* Publisher location */
                 if ($configVar == "publisherLocation") {
-                        $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
-                        $loadedData = $isoCodes->getCountries()->getByAlpha2($loadedData)->getLocalName();
+                    $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
+                    $loadedData = $loadedData ? $isoCodes->getCountries()->getByAlpha2($loadedData)->getLocalName() : null;
                 }
-                
+
                 if($loadedData){
                     $aboutText .= "<p>".__('plugins.generic.contextEnhancer.settings.'.$configVar) . " " . $loadedData . "</p>";
                 }
             }
-            
+
 
             // Content update inside object
             $currentContext->setData('about', $aboutText, $currentLocale);
