@@ -1,54 +1,54 @@
 #
 msgid ""
-msgstr "Language: ar_IQ\n"
+msgstr "Language: sv\n"
 
 msgid "plugins.generic.contextEnhancer.displayName"
-msgstr "مُحسّن السياق"
+msgstr "Kontextförstärkare"
 
 msgid "plugins.generic.contextEnhancer.description"
-msgstr "مكون إضافي لـ OJS يسمح بإضافة بيانات إضافية إلى سياق المجلة ومنشوراتها في الواجهة الأمامية"
+msgstr "En OJS -plugin som gör att ytterligare data kan läggas till i tidskriftens sammanhang och dess publikationer kan visas på frontend"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi"
-msgstr "مجلة doi"
+msgstr "Journal's doi"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.journalDoi.description"
-msgstr "املأ DOI للمجلة بالتنسيق 10.xxxx/xxxx (على سبيل المثال 10.1234/ABCDEFGH)"
+msgstr "Fyll i tidskriftens DOI i formatet 10.xxxx/xxxx (t.ex. 10.1234/abcdefgh)"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation"
-msgstr "موقع الناشر"
+msgstr "Förläggare"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherName"
-msgstr "لقد ملأت اسم الناشر هذا في الإعدادات: <strong> {$ publishername} </strong>"
+msgstr "Du har fyllt detta utgivarnamn i inställningarna: <strong> {$ PublisherName} </strong>"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.publisherLocation.description"
-msgstr "حدد البلد الذي يوجد فيه الناشر."
+msgstr "Välj det land där förläggaren är baserad."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords"
-msgstr "الكلمات الرئيسية المجلة"
+msgstr "Journalnyckelord"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.keywords.description"
-msgstr "أدخل الكلمات الرئيسية التي تصف مجلتك ، مفصولة ؛"
+msgstr "Ange nyckelord som beskriver din dagbok, separerad av;"
 
 msgid "plugins.generic.contextEnhancer.manager.settings.peerReviewUsed"
-msgstr "تحقق مما إذا كنت تستخدم عملية مراجعة النظراء."
+msgstr "Kontrollera om du använder peer review -process."
 
 msgid "plugins.generic.contextEnhancer.manager.settings.additionalMetadata"
-msgstr "دفعة مجلة إضافية"
+msgstr "Ytterligare journalmetadata"
 
 msgid "plugins.generic.contextEnhancer.settings.journalDOI"
-msgstr "المجلات doi:"
+msgstr "Tidskrifter doi:"
 
 msgid "plugins.generic.contextEnhancer.settings.publisherLocation"
-msgstr "موقع الناشر:"
+msgstr "Utgivares plats:"
 
 msgid "plugins.generic.contextEnhancer.settings.peerReviewUsed"
-msgstr "المجلة تستخدم مراجعة النظراء:"
+msgstr "Journal använder peer review:"
 
 msgid "plugins.generic.contextEnhancer.settings.yes"
-msgstr "نعم"
+msgstr "ja"
 
 msgid "plugins.generic.contextEnhancer.settings.no"
-msgstr "لا"
+msgstr "inga"
 
 msgid "plugins.generic.contextEnhancer.settings.journalKeywords"
-msgstr "الكلمات الرئيسية المجلة:"
+msgstr "Journalnyckelord:"
