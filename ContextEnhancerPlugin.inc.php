@@ -165,6 +165,8 @@ class ContextEnhancerPlugin extends GenericPlugin {
                     $loadedData = $context->getData($configVar);
                 }
                 
+                if ($loadedData === NULL) continue;
+                
                 /* Publisher location */
                 if ($configVar == "publisherLocation") {
                         $isoCodes = new \Sokil\IsoCodes\IsoCodesFactory();
