@@ -23,8 +23,6 @@ use PKP\form\Form;
 use \PKP\form\validation\FormValidatorPost;
 use \PKP\form\validation\FormValidatorCSRF;
 
-import('lib.pkp.classes.form.Form');
-
 class ContextEnhancerSettingsForm extends Form {
 
         const CONFIG_VARS = array(
@@ -68,7 +66,7 @@ class ContextEnhancerSettingsForm extends Form {
 		$this->_data = array();
 		$context = $this->_context;
 		foreach (self::CONFIG_VARS as $configVar => $type) {
-			$this->_data[$configVar] = $context->getSetting($configVar);
+			$this->_data[$configVar] = $context->getData($configVar);
 		}
 	}
 

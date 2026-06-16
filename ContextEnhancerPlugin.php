@@ -25,8 +25,6 @@ use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 use PKP\facades\Locale;
 
-import('lib.pkp.classes.plugins.GenericPlugin');
-
 class ContextEnhancerPlugin extends GenericPlugin {
 
     const CONFIG_VARS = array(
@@ -99,7 +97,6 @@ class ContextEnhancerPlugin extends GenericPlugin {
      */
     public function getActions($request, $verb) {
         $router = $request->getRouter();
-        import('lib.pkp.classes.linkAction.request.AjaxModal');
         return array_merge(
                 $this->getEnabled() ? array(
             new LinkAction(
@@ -159,7 +156,7 @@ class ContextEnhancerPlugin extends GenericPlugin {
 
 
         if ($currentContext) {
-            $aboutText = $currentContext->getLocalizedSetting('about');
+            $aboutText = $currentContext->getLocalizedData('about');
 
             if ($aboutText === null) $aboutText = "";
 
