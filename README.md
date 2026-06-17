@@ -11,7 +11,7 @@ This works independet from hooks which allows easy compatibility with OJS versio
 
 ```
 cd ${OJS}/plugins/generic
-git clone https://github.com/munipress/contextEnhancer
+git clone https://github.com/Academic-Journals-cz/contextEnhancer
 Goto  OJS  Backend e.g. http://<localhost>/index.php/<my.journal>/management/settings/website#plugins
 Active the plugin: Context enhancer [X]
 Click on the plugin settings and activate the needed metadata fields
@@ -23,13 +23,13 @@ Click on the plugin settings and activate the needed metadata fields
 ### Steps
 #### Adding variables to the context settings table.
 
-- Define  the name of the fields required in [ContextEnhancerSettingsForm](https://github.com/munipress/contextEnhancer/blob/stable-3_3_0/ContextEnhancerSettingsForm.inc.php) in `CONFIG_VARS`
+- Define  the name of the fields required in [ContextEnhancerSettingsForm](https://github.com/Academic-Journals-cz/contextEnhancer/blob/stable-3_3_0/ContextEnhancerSettingsForm.inc.php) in `CONFIG_VARS`
 - Use `MULTILINGUAL`, if the field need to be multilingual.
-- Add defined variables above to the context schema in the method `addToSchema` in [ContextEnhancerPlugin](https://github.com/munipress/contextEnhancer/blob/stable-3_3_0/ContextEnhancerPlugin.inc.php)
+- Add defined variables above to the context schema in the method `addToSchema` in [ContextEnhancerPlugin](https://github.com/Academic-Journals-cz/contextEnhancer/blob/stable-3_3_0/ContextEnhancerPlugin.inc.php)
 
 #### Injecting the variables into the current context object
 - Info: Method `injectContextObject` injects the metadata to the context settings table
-- The conditional statement comparing [template name](https://github.com/withanage/contextEnhancer/blob/stable-3_3_0/ContextEnhancerPlugin.inc.php)  e.g. `if ($template !== "frontend/pages/about.tpl") ` adds the  information to the needed template.
+- The conditional statement comparing [template name](https://github.com/Academic-Journals-cz/contextEnhancer/blob/stable-3_3_0/ContextEnhancerPlugin.inc.php)  e.g. `if ($template !== "frontend/pages/about.tpl") ` adds the  information to the needed template.
 - Specify the name of the template page, you require if you need to, or the method will be modifying the context object all the time
 - Use context variable for adding the new metadata. Plugin needs existing context variables (like: “description”, “about” , “authorInformation”, or even “customHeaders” and many others.)
 
@@ -72,6 +72,8 @@ PHP 8.2 or greater.
 
 ## Support
 Support for OJS 3.3.0
+Support for OJS 3.4.0
+Support for OJS 3.5.0
 
 ### Developed by
 - Radek Gomola (Lead, Masaryk University Press)
